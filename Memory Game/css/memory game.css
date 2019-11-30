@@ -27,9 +27,9 @@ img{
     perspective: 1000px;
 }
 
+
 @media screen and (max-width: 810px) {
 
-    
     .memory-game {
       width: 600px;
     }
@@ -39,6 +39,11 @@ img{
 
     .memory-game {
       width: 415px;
+    }
+
+    .modal img{
+        height: 50%;
+        width: 70%;
     }
   }
 
@@ -68,7 +73,6 @@ img{
     padding: 3%;
     border-radius: 3%;
     position: absolute;
-    border: 1px solid deeppink;
     backface-visibility: hidden;
 }
 
@@ -88,12 +92,8 @@ img{
     top: 0;
     width: 100%; 
     height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
+    overflow: auto;
     background-color: rgba(0,0,0,0.4); 
-    display: flex;
-    justify-content: center;
-    align-content: center;
     display: block;
 }
 
@@ -104,6 +104,7 @@ img{
     width: 50%;
     height: 60%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     font-size: 24px;
   } 
@@ -118,18 +119,22 @@ img{
     margin-left: 27%;
     font-size: 120%;
   }
-  .modal button{
+  .new-game{
     font-size: 24px;
     text-decoration: none;
     outline: none;
-    background-color: #b7e4f9ff;
-    height: 20%;
-    width: 60%;
+    background-color: red;
+    height: 30%;
+    width: 100%;
     border-radius: 12px;
     box-shadow: 0 6px #999;
+    font-family: 'Permanent Marker', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #35c9dd;
+    text-shadow: -1px 0 lime, 0 1px lime, 1px 0 lime, 0 -1px lime;
   }
 
-  .modal button:active {
+  .new-game:active {
     background-color: rgb(127, 197, 230);
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -138,4 +143,6 @@ img{
   .modal img{
       height: 120%;
       width: 120%;
+      z-index: 1234;
   }
+
